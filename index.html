@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#17352d" />
+  <meta name="description" content="Mission Prep resources: scriptures, music, talks, quotes, and weekly challenges." />
+  <title>Mission Prep</title>
+  <style>
+    :root {
+      --ink: #17231f;
+      --muted: #647069;
+      --paper: #f7f5ef;
+      --card: #ffffff;
+      --green: #17352d;
+      --green-2: #234d41;
+      --sage: #dfe8df;
+      --gold: #c9a76a;
+      --line: #e3e4de;
+      --shadow: 0 12px 36px rgba(23,53,45,.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+    .wrap { width: min(760px, calc(100% - 32px)); margin: 0 auto; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      background:
+        radial-gradient(circle at 85% 10%, rgba(201,167,106,.34), transparent 32%),
+        linear-gradient(145deg, #102820 0%, #17352d 58%, #234d41 100%);
+      padding: 72px 0 56px;
+    }
+    .hero:after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -120px;
+      width: 300px;
+      height: 300px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 50%;
+    }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 6px 10px;
+      border: 1px solid rgba(255,255,255,.26);
+      border-radius: 999px;
+      font-size: .78rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.88);
+    }
+    h1 {
+      margin: 0;
+      max-width: 620px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 12vw, 5.4rem);
+      line-height: .98;
+      letter-spacing: -.04em;
+      font-weight: 500;
+    }
+    .hero p {
+      max-width: 590px;
+      margin: 24px 0 0;
+      color: rgba(255,255,255,.83);
+      font-size: 1.05rem;
+    }
+
+    main { padding: 26px 0 64px; }
+    section {
+      margin: 18px 0;
+      padding: 30px 24px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+    section.soft { background: #f0f4ef; }
+    section.dark {
+      background: var(--green);
+      color: white;
+      border-color: transparent;
+    }
+
+    .section-kicker {
+      margin: 0 0 6px;
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      color: var(--green-2);
+    }
+    .dark .section-kicker { color: #d4c39f; }
+    h2 {
+      margin: 0 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 7vw, 2.5rem);
+      line-height: 1.1;
+      font-weight: 500;
+    }
+    .intro { margin: 0 0 22px; color: var(--muted); }
+    .dark .intro { color: rgba(255,255,255,.72); }
+
+    .resource-list { display: grid; gap: 12px; }
+    .resource {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+    }
+    .resource strong { display: block; font-size: 1.02rem; margin-bottom: 4px; }
+    .resource p { margin: 0 0 12px; color: var(--muted); font-size: .93rem; }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 11px 16px;
+      border-radius: 12px;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      font-weight: 750;
+      font-size: .94rem;
+    }
+    .button.secondary { background: #eef3ef; color: var(--green); }
+    .button.full { width: 100%; }
+
+    .quote {
+      margin: 0;
+      padding-left: 18px;
+      border-left: 3px solid var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.25rem;
+      line-height: 1.45;
+    }
+    .quote-source { margin: 12px 0 0 21px; color: var(--muted); font-size: .9rem; }
+
+    .placeholder {
+      border: 1.5px dashed #bfc8c0;
+      border-radius: 14px;
+      padding: 16px;
+      color: #6d786f;
+      background: rgba(255,255,255,.55);
+      font-size: .94rem;
+    }
+
+    .challenge {
+      padding: 20px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.16);
+    }
+    .challenge strong { display: block; margin-bottom: 6px; }
+
+    footer {
+      padding: 26px 0 56px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    @media (min-width: 680px) {
+      .hero { padding: 100px 0 78px; }
+      section { padding: 38px; }
+      .resource-list.two { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Mission Preparation</div>
+      <h1>Mission Prep</h1>
+      <p>Resources to help you prepare to serve, teach, study, and become the missionary the Lord needs you to be.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <p class="section-kicker">Study</p>
+      <h2>Favorite Scriptures</h2>
+      <p class="intro">Scriptures we want to remember and carry with us.</p>
+      <div class="resource-list two">
+        <div class="resource">
+          <strong>Scripture #1</strong>
+          <p>Add the reference and a short note about why it matters.</p>
+          <a class="button" href="#">Read in Gospel Library →</a>
+        </div>
+        <div class="resource">
+          <strong>Scripture #2</strong>
+          <p>Add the reference and a short note about why it matters.</p>
+          <a class="button" href="#">Read in Gospel Library →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft">
+      <p class="section-kicker">Listen</p>
+      <h2>Mission Prep Playlist</h2>
+      <p class="intro">Music that helps us focus on Christ, missionary work, and preparing to serve.</p>
+      <div class="placeholder">Spotify playlist will go here. We can use a direct Spotify button or an embedded player.</div>
+      <div style="height:12px"></div>
+      <a class="button full" href="#">Listen on Spotify →</a>
+    </section>
+
+    <section>
+      <p class="section-kicker">Learn</p>
+      <h2>Talk to Study</h2>
+      <p class="intro">A message worth studying, marking, and coming back to.</p>
+      <div class="resource">
+        <strong>General Conference Talk</strong>
+        <p>Talk title, speaker, and a short note will go here.</p>
+        <a class="button" href="#">Read or Watch the Talk →</a>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-kicker">Remember</p>
+      <h2>Words to Remember</h2>
+      <blockquote class="quote">“Your favorite quote will go here.”</blockquote>
+      <p class="quote-source">— Speaker or source</p>
+    </section>
+
+    <section class="soft">
+      <p class="section-kicker">Prepare</p>
+      <h2>Preparing to Serve</h2>
+      <p class="intro">Mission preparation thoughts, advice, and class reminders.</p>
+      <div class="placeholder">Your paragraphs and advice will be organized here into short, readable sections.</div>
+    </section>
+
+    <section>
+      <p class="section-kicker">Resources</p>
+      <h2>Keep Preparing</h2>
+      <p class="intro">Helpful Church resources for study and preparation.</p>
+      <div class="resource-list">
+        <a class="button full secondary" href="#">Preach My Gospel →</a>
+        <a class="button full secondary" href="#">Additional Resource →</a>
+      </div>
+    </section>
+
+    <section class="dark">
+      <p class="section-kicker">This Week</p>
+      <h2>Mission Prep Challenge</h2>
+      <p class="intro">One simple thing to practice before we meet again.</p>
+      <div class="challenge">
+        <strong>This week’s challenge</strong>
+        Add the current challenge here. This section can be changed anytime without changing the NFC tag.
+      </div>
+    </section>
+
+    <section style="text-align:center">
+      <p class="section-kicker">Go & Do</p>
+      <h2>Prepare with purpose.</h2>
+      <p class="intro" style="max-width:560px;margin-left:auto;margin-right:auto">Prepare now to become the kind of disciple who can represent Jesus Christ with faith, love, and confidence.</p>
+      <div class="placeholder">Optional final scripture, class motto, or closing thought.</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Mission Prep • Built as a simple mobile resource page</div>
+  </footer>
+</body>
+</html>
