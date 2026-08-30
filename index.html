@@ -18,13 +18,21 @@
     main{background:var(--paper);padding:8px 0 64px}section{padding:42px 0;border-bottom:1px solid var(--line)}section:last-of-type{border-bottom:0}
     .section-label{margin:0 0 10px;font-family:Arial,Helvetica,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
     h2{margin:0 0 12px;color:var(--teal-dark);font-size:clamp(2rem,8vw,3rem);font-weight:400;line-height:1.08;letter-spacing:-.02em}.section-intro{margin:0 0 28px;color:var(--muted);font-size:1rem}
-    .feature-link{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px 22px;background:var(--teal);color:#fff;text-decoration:none;border:2px solid var(--teal);box-shadow:0 4px 0 var(--gold);transition:transform .15s ease,box-shadow .15s ease,background .15s ease}.feature-link strong{display:block;margin-bottom:4px;color:#fff;font-size:1.28rem;font-weight:400}.feature-link span{color:#dfe8e5;font-family:Arial,Helvetica,sans-serif;font-size:.9rem}.feature-link .arrow{flex:0 0 auto;font-family:Arial,Helvetica,sans-serif;font-size:1.45rem;font-weight:700;color:#fff}.feature-link:hover{background:var(--teal-dark);transform:translateY(-1px);box-shadow:0 5px 0 var(--gold)}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:11px 16px;background:var(--teal);color:#fff;text-decoration:none;border:2px solid var(--teal);font-family:Arial,Helvetica,sans-serif;font-size:.9rem;font-weight:700;line-height:1.2;transition:background .15s ease,border-color .15s ease,transform .15s ease}
+    .btn:hover{background:var(--teal-dark);border-color:var(--teal-dark);transform:translateY(-1px)}
+    .btn.secondary{background:transparent;color:var(--teal-dark);border-color:var(--teal)}
+    .btn.secondary:hover{background:#edf3f1;color:var(--teal-dark)}
+    .btn.full{width:100%;justify-content:space-between;padding:18px 20px;text-align:left}
+    .btn .sub{display:block;margin-top:4px;color:#dfe8e5;font-size:.82rem;font-weight:400}.btn .arrow{font-size:1.15rem}
+
     .lesson-list,.scripture-list{border-top:1px solid var(--line)}.lesson-row,.scripture-row{padding:21px 0;border-bottom:1px solid var(--line)}
-    .lesson-number{display:block;margin-bottom:5px;color:var(--blue);font-family:Arial,Helvetica,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.lesson-title{color:var(--teal-dark);font-size:1.23rem;line-height:1.4;text-decoration:none;text-underline-offset:4px}.lesson-title:hover{color:var(--blue);text-decoration:underline;text-decoration-color:var(--gold)}
-    .scripture-row{display:grid;gap:14px}.scripture-ref{margin:0;font-size:1.35rem;color:var(--ink)}.link{display:inline-block;width:fit-content;color:var(--teal-dark);font-family:Arial,Helvetica,sans-serif;font-size:.88rem;font-weight:700;text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:2px}.link:hover{color:var(--blue)}
+    .lesson-number{display:block;margin-bottom:8px;color:var(--blue);font-family:Arial,Helvetica,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    .lesson-row .btn{width:100%;justify-content:space-between;text-align:left}
+    .scripture-row{display:grid;gap:14px}.scripture-ref{margin:0;font-size:1.35rem;color:var(--ink)}
     .video-shell{overflow:hidden;background:#102f34;border:1px solid #b8b4a9;aspect-ratio:16/9}.video-shell iframe{display:block;width:100%;height:100%;border:0}.talk-meta{margin-top:22px}.talk-title{margin:0 0 3px;font-size:1.38rem;color:var(--teal-dark)}.talk-speaker{margin:0 0 14px;color:var(--muted);font-family:Arial,Helvetica,sans-serif;font-size:.9rem}
     footer{background:var(--paper);color:#7a817f;padding:8px 0 44px;font-family:Arial,Helvetica,sans-serif;font-size:.78rem;letter-spacing:.03em}
-    @media(min-width:680px){.title-grid{grid-template-columns:minmax(250px,.9fr) minmax(320px,1.1fr);align-items:end;gap:46px}.header-inner{padding:88px 0 70px}section{padding:52px 0}.scripture-row{grid-template-columns:1fr auto;align-items:center}}
+    @media(min-width:680px){.title-grid{grid-template-columns:minmax(250px,.9fr) minmax(320px,1.1fr);align-items:end;gap:46px}.header-inner{padding:88px 0 70px}section{padding:52px 0}.scripture-row{grid-template-columns:1fr auto;align-items:center}.lesson-row .btn{width:auto;min-width:72%}}
   </style>
 </head>
 <body>
@@ -43,7 +51,7 @@
       <p class="section-label">Start Here Each Week</p>
       <h2>For the Strength of Youth</h2>
       <p class="section-intro">Use the current <em>For the Strength of Youth</em> magazine as a starting place for weekly personal study and for preparing for Sunday lessons.</p>
-      <a class="feature-link" href="https://www.churchofjesuschrist.org/study/magazines/for-the-strength-of-youth?lang=eng" target="_blank" rel="noopener"><span><strong>Open For the Strength of Youth</strong><span>Weekly study · Sunday lesson preparation</span></span><span class="arrow">→</span></a>
+      <a class="btn full" href="https://www.churchofjesuschrist.org/study/magazines/for-the-strength-of-youth?lang=eng" target="_blank" rel="noopener"><span>Open For the Strength of Youth<span class="sub">Weekly study · Sunday lesson preparation</span></span><span class="arrow">→</span></a>
     </section>
 
     <section>
@@ -51,9 +59,9 @@
       <h2>Testimony Foundations</h2>
       <p class="section-intro">Study these sections as they are the foundation of testimonies.</p>
       <div class="lesson-list">
-        <div class="lesson-row"><span class="lesson-number">Lesson 1</span><a class="lesson-title" href="https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/04-chapter-3/08-chapter-3-lesson-1?lang=eng" target="_blank" rel="noopener">The Message of the Restoration of the Gospel of Jesus Christ</a></div>
-        <div class="lesson-row"><span class="lesson-number">Lesson 2</span><a class="lesson-title" href="https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/04-chapter-3/09-chapter-3-lesson-2?lang=eng" target="_blank" rel="noopener">Heavenly Father’s Plan of Salvation</a></div>
-        <div class="lesson-row"><span class="lesson-number">Lesson 3</span><a class="lesson-title" href="https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/04-chapter-3/10-chapter-3-lesson-3?lang=eng" target="_blank" rel="noopener">The Gospel of Jesus Christ</a></div>
+        <div class="lesson-row"><span class="lesson-number">Lesson 1</span><a class="btn secondary" href="https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/04-chapter-3/08-chapter-3-lesson-1?lang=eng" target="_blank" rel="noopener"><span>The Message of the Restoration of the Gospel of Jesus Christ</span><span class="arrow">→</span></a></div>
+        <div class="lesson-row"><span class="lesson-number">Lesson 2</span><a class="btn secondary" href="https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/04-chapter-3/09-chapter-3-lesson-2?lang=eng" target="_blank" rel="noopener"><span>Heavenly Father’s Plan of Salvation</span><span class="arrow">→</span></a></div>
+        <div class="lesson-row"><span class="lesson-number">Lesson 3</span><a class="btn secondary" href="https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/04-chapter-3/10-chapter-3-lesson-3?lang=eng" target="_blank" rel="noopener"><span>The Gospel of Jesus Christ</span><span class="arrow">→</span></a></div>
       </div>
     </section>
 
@@ -62,15 +70,15 @@
       <h2>Favorite Scriptures</h2>
       <p class="section-intro">Some of our favorite scriptures.</p>
       <div class="scripture-list">
-        <div class="scripture-row"><p class="scripture-ref">Alma 36:27–30</p><a class="link" href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/36?lang=eng&id=p27-p30#p27" target="_blank" rel="noopener">Open scripture</a></div>
-        <div class="scripture-row"><p class="scripture-ref">Doctrine &amp; Covenants 18:15–16</p><a class="link" href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/18?lang=eng&id=p15-p16#p15" target="_blank" rel="noopener">Open scripture</a></div>
+        <div class="scripture-row"><p class="scripture-ref">Alma 36:27–30</p><a class="btn secondary" href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/36?lang=eng&id=p27-p30#p27" target="_blank" rel="noopener">Open scripture →</a></div>
+        <div class="scripture-row"><p class="scripture-ref">Doctrine &amp; Covenants 18:15–16</p><a class="btn secondary" href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/18?lang=eng&id=p15-p16#p15" target="_blank" rel="noopener">Open scripture →</a></div>
       </div>
     </section>
 
     <section>
       <p class="section-label">Watch</p><h2>Favorite Talk</h2>
       <div class="video-shell"><iframe src="https://www.youtube-nocookie.com/embed/yLXr9it_pbY" title="His Grace Is Sufficient by Brad Wilcox" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-      <div class="talk-meta"><p class="talk-title">His Grace Is Sufficient</p><p class="talk-speaker">Brad Wilcox</p><a class="link" href="https://www.youtube.com/watch?v=yLXr9it_pbY" target="_blank" rel="noopener">Watch on YouTube</a></div>
+      <div class="talk-meta"><p class="talk-title">His Grace Is Sufficient</p><p class="talk-speaker">Brad Wilcox</p><a class="btn" href="https://www.youtube.com/watch?v=yLXr9it_pbY" target="_blank" rel="noopener">Watch on YouTube →</a></div>
     </section>
   </div></main>
 
